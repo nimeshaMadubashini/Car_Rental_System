@@ -23,7 +23,7 @@
     <link rel="stylesheet" href="assets/frontAwsome/fontawesome-free-6.4.0-web/css/all.css">
 </head>
 <body>
-<header class="header fixed-top d-flex align-items-center shadow-sm p-1 mb-5 bg-body-tertiary rounded">
+<header class="header fixed-top d-flex align-items-center shadow-sm p-1 mb-5 bg-light rounded">
     <nav class="navbar navbar-expand-lg  w-100 " data-bs-theme="light ">
         <div class="container-fluid">
             <a class="logo pl-5" href="#"><img src="assets/img/promoting.png"></a>
@@ -78,48 +78,53 @@
 </section>
 
 <!--Rides-->
-<section id="ride" class="position-relative w-100 h-100 border bg-light">
+<section id="ride" class="position-relative w-100 h-100  ">
     <div class="text-center justify-content-center mt-4 ">
-        <span >How Its Work</span>
-        <h1>Rent With 3 Easy Steps
+        <span style="font-family: 'Playpen Sans', cursive; font-size: 20px; color: #0f6674" >How  Its  Work</span>
+        <h1 style="font-family: 'Abel', sans-serif;">Rent With 3 Easy Steps
         </h1>
     </div>
-    <div class="container">
+    <div class="container" id="ride1">
         <div class="row ">
-            <div class="col-4 ">
-                <div id="rideUser"  class="position-relative rounded shadow-sm d-flex justify-content-center
+            <div class="col-4 shadow rounded-lg bg-light-subtle">
+                <div id="rideUser"  class=" mt-2 position-relative rounded shadow-sm d-flex justify-content-center
                 align-items-center text-center " style="background: #ececf6 ; left:150px">
-                    <i class="fa-solid fa-user-check fa-2xl d-flex align-items-center justify-content-center text-center" style="color: #fb9541;"></i>
+                    <i class="fa-solid fa-user-check fa-2xl d-flex align-items-center justify-content-center text-center" style="color: darkorange;"></i>
                 </div>
-                <div class="mt-2">
+                <div class="mt-3">
                     <span  class="font-weight-bold text-center mt-2 " style="padding-left: 100px">User Authentication</span>
                     <p class=" text-center mt-2 ">
+                        If Your new User Register First.
                         Users can log into the system using their username and password to access their accounts securely.
                     </p>
                 </div>
             </div>
 
-            <div class="col-4 ">
-                <div id="rideUser"  class="position-relative rounded shadow-sm d-flex justify-content-center
-                align-items-center text-center " style="background: #ececf6 ; left:150px">
-                    <i class="fa-solid fa-user-check fa-2xl d-flex align-items-center justify-content-center text-center" style="color: #fb9541;"></i>
+            <div class="col-4 <!--shadow rounded-lg bg-light-subtle-->" >
+                <div id="rideUser1"  class="position-relative rounded shadow-sm d-flex justify-content-center
+                align-items-center text-center " style="background: darkorange ; left:150px">
+                    <i class="fa-solid fa-car-rear fa-2xl d-flex align-items-center justify-content-center text-center" style="color: #ffffff;"></i>
                 </div>
                 <div class="mt-2">
-                    <span  class="font-weight-bold text-center mt-2 " style="padding-left: 100px">User Authentication</span>
+                    <span  class="font-weight-bold text-center mt-2 " style="padding-left: 100px"> Rental Request</span>
                     <p class=" text-center mt-2 ">
-                        Users can log into the system using their username and password to access their accounts securely.
+                        After logging in, you can place a rental request by specifying your preferred car, including its type and other attributes.
+                        Next, provide the pickup and return details, including dates, times, and location preferences.
+                        If you require a driver for your rental, make sure to indicate this during the request
                     </p>
                 </div>
             </div>
-            <div class="col-4 ">
-                <div id="rideUser"  class="position-relative rounded shadow-sm d-flex justify-content-center
+            <div class="col-4 shadow rounded-lg bg-light-subtle ">
+                <div id="rideUser2"  class="mt-2 position-relative rounded shadow-sm d-flex justify-content-center
                 align-items-center text-center " style="background: #ececf6 ; left:150px">
-                    <i class="fa-solid fa-user-check fa-2xl d-flex align-items-center justify-content-center text-center" style="color: #fb9541;"></i>
+                    <i class="fa-solid fa-check-double fa-2xl  d-flex align-items-center justify-content-center text-center" style="color: darkorange;"></i>
                 </div>
                 <div class="mt-2">
-                    <span  class="font-weight-bold text-center mt-2 " style="padding-left: 100px">User Authentication</span>
+                    <span  class="font-weight-bold text-center mt-2 " style="padding-left: 50px">Multi-Car Booking and Updates</span>
                     <p class=" text-center mt-2 ">
-                        Users can log into the system using their username and password to access their accounts securely.
+                        When making LDW payments, remember to upload bank confirmations as proof for verification.
+                        To stay updated on your rental status, monitor the system for updates and receive driver contact when necessary
+                        Manage your account with ease. Update your username, password, contact info, and driving license details as needed
                     </p>
                 </div>
             </div>
@@ -134,18 +139,41 @@
 
 
 
-<section id="about" class="position-relative w-100 h-100 border bg-light">
-    <div class="row">
-        <div class="col-12 d-flex align-items-center justify-content-center text-center">
-            <span >ABOUT US</span>
-            <h1 >Best Customer Experience</h1>
+<section id="about" class="position-relative w-100   mt-4" style="background: #FDFDFD">
+    <div class="text-center justify-content-center mt-5 ">
+        <span class="position-relative" style="font-family: 'Playpen Sans', cursive; font-size: 20px; color: #0f6674; top: 20px" >ABOUT US</span>
+        <h1 class="position-relative" style="font-family: 'Abel', sans-serif; top: 10px">Best Customer Experience
+        </h1>
+    </div>
+    <div class="container">
+        <div class="row">
+        <div id="aboutimge" class="col-6  ">
+            <img src="assets/img/web/about.png" width="650px" class="mt-4 position-relative" style="right: 50px">
+        </div>
+        <div class="col-6">
+            <span class="position-relative" style=" top:44px ;left: 40px; color:orange; font-size: 20px">ABOUT US</span>
+            <p class="position-relative" style="font-size: 18px; top: 45px ;left: 30px">Welcome to Easy Car Rentals, your trusted partner for convenient and hassle-free car rental services. With a legacy of five years in the industry, we have become synonymous with quality and reliability. Located at No. 200, Galle Road, Panadura, our services cater to a diverse clientele including people who don't have their own vehicles, those looking for car repairs and avid travelers looking for an adventure.
 
+                Recognizing the changing landscape and evolving consumer preferences, we embark on an exciting digital transformation journey.
+
+                A fresh start with a fresh approach
+
+                To keep up with the ever-evolving market, Easy Car Rentals' new approach emphasizes online convenience and efficiency to enhance your experience. Say goodbye to the old way of doing things and welcome a seamless digital experience.</p>
         </div>
-        <div class="col-6">
-        </div>
-        <div class="col-6">
         </div>
     </div>
 </section>
+<!--search car-->
+<div id="checkCar" class="position-relative w-75  txt-center justify-content-center d-flex align-items-center border ">
+    <div class="row shadow rounded-lg " >
+        <div id="searchCar" class="col-4">
+
+            <img  class="bg-opacity-10" src="assets/img/web/lm.jpg" width="350">
+        </div>
+        <div class="col-12">
+
+        </div>
+    </div>
+</div>
 </body>
 </html>

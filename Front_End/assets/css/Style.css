@@ -57,7 +57,7 @@ display: inline-block;
     height: 100vh;
     margin: 0px;
     z-index: 10;
-border-top: 1px solid black;
+    border-top: 1px solid black;
     background: url("/assets/img/web/Car Website – 1@2x.png");
     background-size: cover;
 
@@ -101,7 +101,43 @@ right: 20px;
     right: 120px;
 
 }
-#rideUser{
+#rideUser {
     width: 50px;
     height: 50px;
+}
+#rideUser1 {
+    width: 50px;
+    height: 50px;
+}
+#rideUser2 {
+    width: 50px;
+    height: 50px;
+}
+#ride1{
+    margin-top: 50px;
+}
+/*
+#aboutimge{
+    width:100vw;
+    height: 75vh;
+    background-image: url("/assets/img/web/about.png");
+
+    background-position: center;
+    background-size: cover;
+}*/
+#about{
+    height: 120vh;
+}
+#searchCar{
+    width:75vw;
+    height: 197px;
+    background-position: center;
+    background-size: cover;
+    background-color: white;
+}
+#checkCar{
+    bottom: 120px;
+    left: 150px;
+    height: 200px;
+
 }
