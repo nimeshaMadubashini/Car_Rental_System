@@ -45,6 +45,7 @@ display: inline-block;
 }
 .navbar1 ul li a:hover::after {
     width: 100%;
+    color: #1d2951 !important;
 }
 #homeimg{
     background: url("/assets/img/web/Car Website – 1@2x.png");
@@ -63,7 +64,7 @@ display: inline-block;
 
 }
 #signin:hover{
-    background-color: orange;
+    background-color: #1d2951;
 }
 #headrH3{
 
@@ -140,4 +141,21 @@ right: 20px;
     left: 150px;
     height: 200px;
 
+}
+.form-label {
+    margin-left: 25px;
+    font-size:15px;
+    font-weight: bold;
+    color:black;
+}
+
+.form-control {
+    margin-left: 28px;
+   /* border-radius: 20px;
+    padding: 10px;*/
+}
+.searchCar{
+    color: black;
+    font-size: 15px;
+    font-weight: bold;
 }
