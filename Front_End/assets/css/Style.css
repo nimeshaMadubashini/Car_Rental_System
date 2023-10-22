@@ -7,6 +7,9 @@
     margin: 0px;
     padding: 0px;
 }
+body{
+    height: 500vh;
+}
 .logo img{
 width: 42px;
 }
@@ -85,20 +88,20 @@ display: inline-block;
     font-size: 60px;
 }
 #homeTitel2{
-    bottom: 60px;
+    bottom: 24px;
     font-size: 40px;
 }
 
 #homeTitel3{
-    bottom: 70px;
+    bottom: 30px;
 }
 #homeimg1{
-bottom: 60px;
+bottom: 25px;
 right: 20px;
 
 }
 #homeimg2{
-    bottom: 60px;
+    bottom: 25px;
     right: 120px;
 
 }
