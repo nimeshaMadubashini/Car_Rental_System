@@ -1063,3 +1063,60 @@ form .btn {
     stroke-dasharray: 125.6;
     transform: rotate(-90deg);
 }
+.wrapper{
+    max-width: 350px;
+    min-height: 152px;
+    background-color: white;
+    border-radius: 15px;
+    /*
+    box-shadow: inset 9px 8px 25px lightgray, inset -8px -8px 8px #fff;
+    */
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+
+}
+.card-icon{
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+#dash{
+
+    border-radius: 10px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    width: 208px;
+    position: relative;
+    left: -3px;
+}
+.card-title{
+    color: #0f3d81;
+}
+#recent{
+    box-shadow: inset 9px 8px 25px lightgray, inset -8px -8px 8px #fff;
+
+}
+#dash1{
+
+    border-radius: 10px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    width: 208px;
+    position: relative;
+    left: -3px;
+}
+#backuser{
+
+    background-color: gainsboro;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+#deleteRent{
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+
+}
+
+.form-control , #card3{
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+
+}
+#card , #card1{
+    background-color: gainsboro;
+    border-radius: 15px;
+    box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
