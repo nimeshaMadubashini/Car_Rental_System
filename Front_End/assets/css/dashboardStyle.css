@@ -1107,7 +1107,7 @@ form .btn {
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 }
 #deleteRent{
-    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -7px -7px 7px #fff;
 
 }
 
@@ -1116,7 +1116,24 @@ form .btn {
 
 }
 #card , #card1{
-    background-color: gainsboro;
+    background-color: #DBE8FA;
     border-radius: 15px;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+}
+#responseRentId{
+    display: block;
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
 }
