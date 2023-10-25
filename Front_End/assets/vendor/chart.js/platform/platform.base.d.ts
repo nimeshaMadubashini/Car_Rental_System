@@ -55,7 +55,7 @@ export default class BasePlatform {
        */
     isAttached(canvas: HTMLCanvasElement): boolean;
     /**
-     * Updates config with platform specific requirements
+     * Updates com.easy.car_Rent.advisor.config with platform specific requirements
      * @param {import('../core/core.config.js').default} config
      */
     updateConfig(config: import('../core/core.config.js').default): void;

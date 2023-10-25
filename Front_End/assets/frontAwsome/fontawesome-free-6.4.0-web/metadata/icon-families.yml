@@ -4254,7 +4254,7 @@ bell-concierge:
       - bellhop bell
       - hotel
       - receptionist
-      - service
+      - com.easy.car_Rent.advisor.service
       - support
   unicode: f562
   voted: false
@@ -20774,7 +20774,7 @@ gamepad:
   search:
     terms:
       - arcade
-      - controller
+      - com.easy.car_Rent.advisor.controller
       - d-pad
       - joystick
       - video
@@ -44151,7 +44151,7 @@ taxi:
       - cab
       - cabbie
       - car
-      - car service
+      - car com.easy.car_Rent.advisor.service
       - lyft
       - machine
       - oncoming

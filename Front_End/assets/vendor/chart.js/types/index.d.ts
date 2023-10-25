@@ -590,7 +590,7 @@ export declare class DatasetController<
   readonly index: number;
   readonly _cachedMeta: ChartMeta<TType, TElement, TDatasetElement>;
   enableOptionSharing: boolean;
-  // If true, the controller supports the decimation
+  // If true, the com.easy.car_Rent.advisor.controller supports the decimation
   // plugin. Defaults to `false` for all controllers
   // except the LineController
   supportsDecimation: boolean;
@@ -2045,7 +2045,7 @@ export declare class BasePlatform {
    */
   isAttached(canvas: HTMLCanvasElement): boolean;
   /**
-   * Updates config with platform specific requirements
+   * Updates com.easy.car_Rent.advisor.config with platform specific requirements
    * @param {ChartConfiguration | ChartConfigurationCustomTypes} config
    */
   updateConfig(config: ChartConfiguration | ChartConfigurationCustomTypesPerDataset): void;

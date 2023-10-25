@@ -11,7 +11,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/index.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/index.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -717,7 +717,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/config.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/com.easy.car_Rent.advisor.config.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -857,7 +857,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/component-functions.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/component-functions.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -1096,7 +1096,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/swipe.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/swipe.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4248,7 +4248,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/scrollBar.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/scrollBar.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4367,7 +4367,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/backdrop.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/backdrop.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -4513,7 +4513,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/focustrap.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/focustrap.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5272,7 +5272,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/sanitizer.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/sanitizer.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5377,7 +5377,7 @@
 
   /**
    * --------------------------------------------------------------------------
-   * Bootstrap (v5.2.1): util/template-factory.js
+   * Bootstrap (v5.2.1): com.easy.car_Rent.advisor.util/template-factory.js
    * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
    * --------------------------------------------------------------------------
    */
@@ -5875,7 +5875,7 @@
       } else {
         this._templateFactory = new TemplateFactory({ ...this._config,
           // the `content` var has to be after `this._config`
-          // to override config.content in case of popover
+          // to override com.easy.car_Rent.advisor.config.content in case of popover
           content,
           extraClass: this._resolvePossibleFunction(this._config.customClass)
         });
@@ -6292,7 +6292,7 @@
 
   class ScrollSpy extends BaseComponent {
     constructor(element, config) {
-      super(element, config); // this._element is the observablesContainer and config.target the menu links wrapper
+      super(element, config); // this._element is the observablesContainer and com.easy.car_Rent.advisor.config.target the menu links wrapper
 
       this._targetLinks = new Map();
       this._observableSections = new Map();
