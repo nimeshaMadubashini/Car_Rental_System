@@ -1,10 +1,452 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-  <meta charset="UTF-8">
-  <title>$Title$</title>
+    <meta charset="UTF-8">
+    <title>Admin Dashboard</title>
+    <link href="../../assets/img/logo.png" rel="icon">
+
+    <meta content="Easy Car Rental, Car rental,Vehicle Rental" name="keywords">
+    <meta content="This is Car Rental Web site." name="description">
+    <meta content="Nimesha Madubashini" name="author">
+    <meta content="Nimesha Madubashini" name="owner">
+    <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
+    <meta content="yellow" name="theme-color">
+    <link rel="stylesheet" href="../../assets/frontAwsome/fontawesome-free-6.4.0-web/css/all.css">
+    <!--purple-->
+    <link rel="stylesheet" href="../../assets/vendor/mdi/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="../../assets/vendor/css/vendor.bundle.base.css">
+    <!-- endinject -->
+    <!-- Plugin css for this page -->
+    <!-- End plugin css for this page -->
+    <!-- inject:css -->
+    <!-- endinject -->
+    <!-- Layout styles -->
+    <link rel="stylesheet" href="../../assets/vendor/style.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.gstatic.com" rel="preconnect">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+          rel="stylesheet">
+
+    <!-- Vendor CSS Files -->
+    <link href="../../assets/vendor/bootstrap-5.2.1-dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="../../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+    <link href="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.css" rel="stylesheet">
+
+    <!-- Template Dashboard CSS File -->
+    <link href="../../assets/css/dashboardStyle.css" rel="stylesheet">
+
 </head>
 <body>
-$END$
+<!-- ======= Header ======= -->
+<header id="header" class="header fixed-top d-flex align-items-center bg-light">
+
+    <!-- partial:partials/_navbar.html -->
+    <nav style="height: 60px;" class="navbar default-layout-navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row">
+        <div class="text-center navbar-brand-wrapper d-flex align-items-center justify-content-center" style="width: 301px;height: 30px">
+            <a href="../AdminDashBoard.html" class="logo d-flex align-items-center">
+                <span style="font-family: cursive;    color:#0c5460;" class="d-none d-lg-block">Easy <span style="color:orange;font-family: cursive">Car Rent.</span></span>
+            </a>
+            <i class="bi bi-list toggle-sidebar-btn"></i>
+        </div>
+        <div class="navbar-menu-wrapper d-flex align-items-stretch" style="width: 600px">
+
+            <ul class="navbar-nav navbar-nav-right">
+                <li class="nav-item nav-profile dropdown">
+                    <a class="nav-link dropdown-toggle" id="profileDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <div class="nav-profile-img">
+                            <img src="../../assets/img/face1.jpg" alt="image">
+                            <span class="availability-status online"></span>
+                        </div>
+                        <div class="nav-profile-text">
+                            <p class="mb-1 text-black">David Greymaax</p>
+                        </div>
+                    </a>
+                    <div class="dropdown-menu navbar-dropdown" aria-labelledby="profileDropdown">
+                        <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-cached me-2 text-success"></i> Activity Log </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">
+                            <i class="mdi mdi-logout me-2 text-primary"></i> Signout </a>
+                    </div>
+                </li>
+                <li class="nav-item d-none d-lg-block full-screen-link">
+                    <a class="nav-link">
+                        <i class="mdi mdi-fullscreen" id="fullscreen-button"></i>
+                    </a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="messageDropdown" href="#" data-bs-toggle="dropdown" aria-expanded="false">
+                        <i class="mdi mdi-email-outline"></i>
+                        <span class="count-symbol bg-warning"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
+                        <h6 class="p-3 mb-0">Messages</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <img src="../../assets/img/face4.jpg" alt="image" class="profile-pic">
+                            </div>
+                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Mark send you a message</h6>
+                                <p class="text-gray mb-0"> 1 Minutes ago </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <img src="../../assets/img/face2.jpg" alt="image" class="profile-pic">
+                            </div>
+                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Cregh send you a message</h6>
+                                <p class="text-gray mb-0"> 15 Minutes ago </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <img src="../../assets/img/face3.jpg" alt="image" class="profile-pic">
+                            </div>
+                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                <h6 class="preview-subject ellipsis mb-1 font-weight-normal">Profile picture updated</h6>
+                                <p class="text-gray mb-0"> 18 Minutes ago </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="p-3 mb-0 text-center">4 new messages</h6>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link count-indicator dropdown-toggle" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
+                        <i class="mdi mdi-bell-outline"></i>
+                        <span class="count-symbol bg-danger"></span>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
+                        <h6 class="p-3 mb-0">Notifications</h6>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-success">
+                                    <i class="mdi mdi-calendar"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                <h6 class="preview-subject font-weight-normal mb-1">Event today</h6>
+                                <p class="text-gray ellipsis mb-0"> Just a reminder that you have an event today </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-warning">
+                                    <i class="mdi mdi-settings"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                <h6 class="preview-subject font-weight-normal mb-1">Settings</h6>
+                                <p class="text-gray ellipsis mb-0"> Update dashboard </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item preview-item">
+                            <div class="preview-thumbnail">
+                                <div class="preview-icon bg-info">
+                                    <i class="mdi mdi-link-variant"></i>
+                                </div>
+                            </div>
+                            <div class="preview-item-content d-flex align-items-start flex-column justify-content-center">
+                                <h6 class="preview-subject font-weight-normal mb-1">Launch Admin</h6>
+                                <p class="text-gray ellipsis mb-0"> New admin wow! </p>
+                            </div>
+                        </a>
+                        <div class="dropdown-divider"></div>
+                        <h6 class="p-3 mb-0 text-center">See all notifications</h6>
+                    </div>
+                </li>
+                <li class="nav-item nav-logout d-none d-lg-block">
+                    <a class="nav-link" href="#">
+                        <i class="mdi mdi-power"></i>
+                    </a>
+                </li>
+                <li class="nav-item nav-settings d-none d-lg-block">
+                    <a class="nav-link" href="#">
+                        <i class="mdi mdi-format-line-spacing"></i>
+                    </a>
+                </li>
+            </ul>
+            <button class="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
+                <span class="mdi mdi-menu"></span>
+            </button>
+        </div>
+    </nav>
+
+</header>
+<!-- End Header -->
+
+<!-- ======= Sidebar ======= -->
+<aside id="sidebar" class="sidebar " style="background-color:#003366 ">
+    <a href="#" class="nav-link d-flex "
+       style="flex-direction: row;column-gap: 10px; margin-left: 20px;align-items: center;">
+        <div class="nav-profile-image">
+            <img src="../../assets/img/face1.jpg" class="rounded-circle" width="40" alt="profile">
+            <span class="login-status online"></span>
+            <!-- change to offline or busy as needed -->
+        </div>
+        <div class="nav-profile-text d-flex flex-column">
+            <span class="font-weight-bold " style="color: chartreuse">David Grey. H</span>
+            <span class=" text-small" style="color: white">Project Manager</span>
+        </div>
+        <i class="mdi mdi-bookmark-check nav-profile-badge" style="color:#ff8800;"></i>
+    </a>
+
+    <ul class="sidebar-nav" id="sidebar-nav" style="margin: 17px;margin-top: 35px">
+
+        <li class="nav-item">
+            <a class="nav-link " href="../AdminDashBoard.html" >
+                <i class="bi bi-grid" style="color: orange"></i>
+                <span>Dashboard</span>
+            </a>
+        </li><!-- End Dashboard Nav -->
+
+        <li class="nav-item">
+            <a  class="nav-link collapsed" data-bs-target="#forms-nav" data-bs-toggle="collapse" style="background-color:#003366" href="#">
+                <i style="color:#ff8800;" class="bi bi-kanban"></i><span style="color:white;">Manage</span><i class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="forms-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav" >
+                <li>
+                    <a href="Reg_UserDetail.html">
+                        <i  style="color:white;" class="bi bi-circle"></i><span style="color:white;"  >Customer</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="DriverManage.html">
+                        <i  style="color:white;" class="bi bi-circle"></i><span style="color:white;">Driver</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="CarManage.html">
+                        <i  style="color:white;" class="bi bi-circle"></i><span style="color:white;">Car</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <!-- End Forms Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" data-bs-target="#components-nav" data-bs-toggle="collapse" style="background-color:#003366" href="#">
+                <i class="fa-solid fa-rectangle-list" style="color: #ff9500;"></i><span style="color:white;">Details</span><i
+                    class="bi bi-chevron-down ms-auto"></i>
+            </a>
+            <ul id="components-nav" class="nav-content collapse " data-bs-parent="#sidebar-nav">
+                <li>
+                    <a href="../adminPages/PaymentDetail.html">
+                        <i style="background-color: white" class="bi bi-circle"></i><span style="color: white"> Payment Details</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../adminPages/RentManage.html">
+                        <i style="background-color: white" class="bi bi-circle"></i><span style="color: white">Rent Details</span>
+                    </a>
+                </li>
+            </ul>
+        </li><!-- End View Nav -->
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../adminPages/CustomerRequest.html" id="myDetailsSection" style="background-color: #003366">
+                <i class="fa-solid fa-square-poll-horizontal" style="color: #ff8800;"></i>                <span style="color: white">Rent Request</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="IncomeDetail.html" id="incomeDetails" style="background-color: #003366">
+                <i class="fa-solid fa-chart-simple" style="color: #ff8800;"></i>                <span style="color: white">Income Details</span>
+            </a>
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link collapsed" href="../loginform.html" style="background-color: #003366" >
+                <i class="fa-solid fa-right-from-bracket" style="color: #ff7b00;"></i>                <span style="color: white">LogOut</span>
+            </a>
+        </li>
+        <!-- End Login Page Nav -->
+
+    </ul>
+
+</aside>
+<!-- End Sidebar-->
+
+<!-- ======= Main ======= -->
+<main id="main" class="main">
+
+    <!-- ======= Income Details ======= -->
+    <div class="pageTitle" id="income">
+        <h1  style="color: orange" id="dash2">Manage</h1>
+        <section class="container-fluid mt-3" id="manageCar">
+            <nav>
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="../AdminDashBoard.html">Home</a></li>
+                    <li class="breadcrumb-item active">Income Details</li>
+                </ol>
+            </nav>
+
+            <section class="section">
+                <div class="row">
+
+                    <div class="col-lg-6" >
+                        <div class="card" id="dailyTable">
+                            <div class="card-body">
+                                <h5 class="card-title">Daily Income</h5>
+                                <div class="row mt-3 mt-md-2 mt-lg-4 justify-content-around"
+                                     style="height: 340px;">
+                                    <div class="col-11 justify-content-around sectionBorder"
+                                         style="height: 325px; background: white">
+                                        <div class="table-responsive customerTableDiv overflow-auto "
+                                             style="height: 315px;">
+                                            <table class="table text-nowrap table-light table-striped table-bordered table-hover">
+                                                <thead class="text-dark table-danger text-center  table-bordered">
+                                                <tr>
+                                                    <th scope="col">Date</th>
+                                                    <th scope="col">Bookings</th>
+                                                    <th scope="col"> Daily Income</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="dailyIncomeTable"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="card income">
+                            <div class="card-body">
+                                <h5 class="card-title" id="daily">Daily Income</h5>
+
+                                <!-- Line Chart -->
+                                <div id="dailyIncomeChart" style="height: 370px; max-width: 920px; margin: 0px auto;"></div>
+                                <!-- End Line CHart -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card" id="dailyTable1">
+                            <div class="card-body">
+                                <h5 class="card-title">Monthly Income</h5>
+                                <div class="row mt-3 mt-md-2 mt-lg-4 justify-content-around"
+                                     style="height: 340px;">
+                                    <div class="col-11 justify-content-around sectionBorder"
+                                         style="height: 325px; background: white">
+                                        <div class="table-responsive customerTableDiv overflow-auto "
+                                             style="height: 315px;">
+                                            <table class="table text-nowrap table-light table-striped table-bordered table-hover">
+                                                <thead class="text-dark table-danger text-center  table-bordered">
+                                                <tr>
+                                                    <th scope="col">Month</th>
+                                                    <th scope="col">Bookings</th>
+                                                    <th scope="col"> Monthly Income</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="monthlyIncomeTable"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="card income" >
+                            <div class="card-body">
+                                <h5 id="month" class="card-title">Monthly Income</h5>
+
+                                <!-- Line Chart -->
+                                <canvas id="monthlyIncomeChart" style="max-height: 400px; display: block; box-sizing: border-box; height: 359px; width: 719px;" width="719" height="359"></canvas>
+                                <!-- End Line CHart -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-6">
+                        <div class="card" id="dailyTable2">
+                            <div class="card-body">
+                                <h5 style="" class="card-title">Annually Income</h5>
+                                <div class="row mt-3 mt-md-2 mt-lg-4 justify-content-around"
+                                     style="height: 340px;">
+                                    <div class="col-11 justify-content-around sectionBorder"
+                                         style="height: 325px; background: white">
+                                        <div class="table-responsive customerTableDiv overflow-auto "
+                                             style="height: 315px;">
+                                            <table class="table text-nowrap table-light table-striped table-bordered table-hover">
+                                                <thead class="text-dark table-danger text-center  table-bordered">
+                                                <tr>
+                                                    <th scope="col">Year</th>
+                                                    <th scope="col">Bookings</th>
+                                                    <th scope="col"> Annually Income</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody id="annuallyIncomeTable"></tbody>
+                                            </table>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-6 ">
+                        <div class="card income">
+                            <div class="card-body">
+                                <h5 id="year" class="card-title">Annually Income</h5>
+
+                                <!-- Line Chart -->
+                                <canvas id="annuallyIncomeChart" style="max-height: 400px; display: block; box-sizing: border-box; height: 359px; width: 719px;" width="719" height="359"></canvas>
+                                <!-- End Line CHart -->
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
+        </section>
+    </div>
+    <!-- End Income Details -->
+
+</main>
+<!-- End #main -->
+
+<!-- ======= Footer ======= -->
+<footer id="footer" class="footer">
+    <div class="copyright">
+        &copy; Copyright <strong><span>Easy Car Rent</span></strong>. All Rights Reserved
+    </div>
+    <div class="credits">
+        Designed by <a href="">Nimesha Madubashini</a>
+    </div>
+</footer><!-- End Footer -->
+
+<a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+        class="bi bi-arrow-up-short"></i></a>
+
+<!-- Vendor JS Files -->
+<script src="../../assets/vendor/apexcharts/apexcharts.min.js"></script>
+<script src="../../assets/vendor/bootstrap-5.2.1-dist/js/bootstrap.bundle.min.js"></script>
+<script src="../../assets/vendor/jQuery/jquery-3.6.1.min.js "></script>
+<script rel="script" src="../../assets/vendor/sweetalert2-11.6.16/sweetalert2.min.js"></script>
+<script src="../../assets/vendor/chart.js/chart.umd.js"></script>
+<script src="https://canvasjs.com/assets/script/jquery.canvasjs.min.js"></script>
+<script src="../../assets/vendor/chart.js/canvasjs.min.js"></script>
+<!-- Template Dashboard Main JS File -->
+<script src="../../assets/js/dashboardMain.js"></script>
+
+
 </body>
 </html>

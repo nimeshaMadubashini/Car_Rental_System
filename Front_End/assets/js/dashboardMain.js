@@ -156,7 +156,7 @@
     /**
      * Back to top button
      */
-    let backtotop = select('.back-to-top')
+    let backtotop = select('.nav-settings')
     if (backtotop) {
         const toggleBacktotop = () => {
             if (window.scrollY > 100) {
@@ -190,5 +190,53 @@
             }).observe(mainContainer);
         }, 200);
     }
+// Get the fullscreen button element by its ID
+    const fullscreenButton = document.getElementById("fullscreen-button");
+
+// Function to toggle fullscreen
+    function toggleFullscreen() {
+        if (document.fullscreenElement) {
+            // If the document is currently in fullscreen mode, exit fullscreen
+            if (document.exitFullscreen) {
+                document.exitFullscreen();
+            }
+        } else {
+            // If not in fullscreen, request fullscreen on the document
+            if (document.documentElement.requestFullscreen) {
+                document.documentElement.requestFullscreen();
+            }
+        }
+    }
+
+// Add a click event listener to the fullscreen button
+    fullscreenButton.addEventListener("click", toggleFullscreen);
+// Get the element that triggers the scroll (the "nav-settings" link)
+/*
+    const scrollTrigger = document.querySelector(".nav-settings");
+*/
+
+/*// Function to smoothly scroll from bottom to top
+    function scrollToTop() {
+        const scrollDuration = 8000; // Duration of the scroll animation in milliseconds
+
+        const scrollStep = -window.scrollY / (scrollDuration / 50); // Calculate how much to scroll on each animation frame
+
+        // Function to perform the scroll animation
+        function step() {
+            if (window.scrollY > 0) {
+                window.scrollBy(0, scrollStep);
+                requestAnimationFrame(step); // Repeat the animation frame until we reach the top
+            }
+        }
+
+        // Start the scroll animation
+        requestAnimationFrame(step);
+    }
+
+// Add a click event listener to the scroll trigger
+    scrollTrigger.addEventListener("click", function (e) {
+        e.preventDefault(); // Prevent the default link behavior
+        scrollToTop(); // Initiate the scroll animation
+    });*/
 
 })();

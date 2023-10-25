@@ -14266,7 +14266,7 @@ dl {
           .sidebar .nav.sub-menu .nav-item .nav-link:hover {
             color: #555555; }
         .sidebar .nav.sub-menu .nav-item:hover {
-          background: transparent; }
+          background:#003366 ; }
 
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {

@@ -1092,7 +1092,7 @@ form .btn {
     box-shadow: inset 9px 8px 25px lightgray, inset -8px -8px 8px #fff;
 
 }
-#dash1{
+#dash1,#drive,#dash2,#daily{
 
     border-radius: 10px;
     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
@@ -1115,7 +1115,7 @@ form .btn {
     box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
 
 }
-#card , #card1{
+#card , #card1,#driveUser,#cusReq,.income,#regiUser,#carmanage{
     background-color: #DBE8FA;
     border-radius: 15px;
     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
@@ -1136,4 +1136,18 @@ form .btn {
     appearance: none;
     border-radius: 0.375rem;
     transition: border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+}
+#daily,#month,#year{
+
+    border-radius: 10px;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;
+    width: 175px;
+    position: relative;
+    height: 45px;
+    top: 8px;
+    color: #171a1d;
+}
+#dailyTable,#dailyTable1,#dailyTable2,#pay,#regiUserTable,#rent,#carmanage1{
+    background-color: #F9F8F6;
+    box-shadow: inset 8px 8px 8px #cbced1, inset -8px -8px 8px #fff;"
 }
