@@ -13,7 +13,6 @@
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Easy_Car_Rental_WebProject" target="1.8" />
-      <module name="Front_End" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>
