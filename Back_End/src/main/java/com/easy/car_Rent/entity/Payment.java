@@ -10,16 +10,16 @@ import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalTime;
 
-@Entity
-@Data
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Data
+@Entity
 public class Payment {
     @Id
     private String paymentID;
-    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name = "rentID",referencedColumnName = "rentID",nullable = false)
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
+    @JoinColumn(name = "rentID", referencedColumnName = "rentID", nullable = false)
     private Rent rentID;
     private PaymentType paymentType;
     private LocalDate date;

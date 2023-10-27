@@ -13,6 +13,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -35,7 +36,7 @@ public class Car {
     @Embedded
     private Rate rent_Duration_Price;
     private double price_Extra_KM;
-    private  String registration_Number;
+    private String registration_Number;
     private double free_Mileage;
     private String color;
     @Enumerated(EnumType.STRING)

@@ -9,15 +9,15 @@ import lombok.ToString;
 
 import javax.persistence.*;
 import java.time.LocalDate;
-import java.time.LocalDateTime;
 import java.time.LocalTime;
 import java.util.List;
 
-@Entity
-@Data
+
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Data
+@Entity
 public class Rent {
     @Id
     private String rentID;
@@ -30,10 +30,12 @@ public class Rent {
     @Enumerated(EnumType.STRING)
     private RentRequest rentType;
     private String location;
-    @ManyToOne(cascade = {CascadeType.REFRESH,CascadeType.DETACH})
-    @JoinColumn(name ="userID",referencedColumnName = "user_Id",nullable = false)
+
+    @ManyToOne(cascade = {CascadeType.REFRESH, CascadeType.DETACH})
+    @JoinColumn(name = "userID", referencedColumnName = "user_Id", nullable = false)
     private Reg_User regUser;
-    @OneToMany(mappedBy = "rent",cascade = CascadeType.ALL)
+
+    @OneToMany(mappedBy = "rent", cascade = CascadeType.ALL)
     private List<RentDetails> rentDetails;
 
 }

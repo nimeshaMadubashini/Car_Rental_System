@@ -8,6 +8,7 @@ import lombok.ToString;
 
 import javax.persistence.*;
 
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -16,12 +17,14 @@ import javax.persistence.*;
 public class Admin {
     @Id
     private String user_Id;
+
     @Embedded
     private Name name;
     private String contact_No;
     private String address;
-    private  String email;
-    private  String nic;
+    private String email;
+    private String nic;
+
     @OneToOne(cascade = CascadeType.ALL)
     private User user;
 }

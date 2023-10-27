@@ -8,6 +8,8 @@ import lombok.NoArgsConstructor;
 import lombok.ToString;
 
 import javax.persistence.*;
+
+
 @Entity
 @Data
 @NoArgsConstructor
@@ -16,14 +18,15 @@ import javax.persistence.*;
 public class Driver {
     @Id
     private String user_Id;
+
     @Embedded
     private Name name;
-    private  String contact_No;
+    private String contact_No;
     private String address;
     private String email;
-    private  String nic_No;
-    private  String licence_No;
-    private  String  licence_Img;
+    private String nic_No;
+    private String license_No;
+    private String license_Img;
     @Enumerated(EnumType.STRING)
     private AvailabilityType driverAvailability;
 

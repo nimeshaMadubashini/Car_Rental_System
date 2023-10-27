@@ -5,23 +5,25 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
-@Entity
-@Data
+import javax.persistence.*;
+
+
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
+@Data
+@Entity
+@IdClass(RentDetail_PK.class)
 public class RentDetails {
     @Id
-    private  String carID;
+    private String carID;
     @Id
     private String rentID;
+
     private String driverID;
+
     @ManyToOne
-    @JoinColumn(name ="rentID",referencedColumnName ="rentID",insertable = false,updatable = false)
+    @JoinColumn(name = "rentID",referencedColumnName = "rentID",insertable = false,updatable = false)
     private Rent rent;
 
     @ManyToOne
