@@ -1,12 +1,28 @@
 package com.easy.car_Rent.controller;
 
-import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import com.easy.car_Rent.dto.Reg_UserDTO;
+import com.easy.car_Rent.dto.UserDTO;
+import com.easy.car_Rent.embeded.Name;
+import com.easy.car_Rent.service.Reg_UserService;
+import com.easy.car_Rent.util.ResponseUtil;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
-@RequestMapping("/reg_User")
 @CrossOrigin
+@RequestMapping("/reg_User")
 public class Reg_UserController {
 
+
+    @Autowired
+    private Reg_UserService regUserService;
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping
+    public ResponseUtil saveUser(@ModelAttribute Reg_UserDTO reg_userDTO, @ModelAttribute UserDTO userDTO, @ModelAttribute Name name){
+        reg_userDTO.setName(name);
+        reg_userDTO.setUser(userDTO);
+        regUserService.saveUser(reg_userDTO);
+        return new ResponseUtil("OK", "Successfully Registered.!", null);
+    }
 }

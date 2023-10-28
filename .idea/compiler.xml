@@ -7,12 +7,12 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="Easy_Car_Rental_WebProject" />
-        <module name="Front_End" />
         <module name="Back_End" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
       <module name="Easy_Car_Rental_WebProject" target="1.8" />
+      <module name="Front_End" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

@@ -1,4 +1,27 @@
 let baseUrl="http://localhost:8081/Back_End_war/"
+$("#btnSaveCustomer").attr('disabled', true);
+$("#btnUpdateCustomer").attr('disabled', true);
+$("#btnDeleteCustomer").attr('disabled', true);
+
+/*registwer user*/
+$("#btnSaveCustomer").click(function () {
+    let formData = new FormData($("#customerForm")[0]);
+    console.log(formData);
+    $.ajax({
+        url: baseUrl + "reg_User",
+        method: "post",
+        data: formData,
+        contentType: false,
+        processData: false,
+        success: function (res) {
+            saveUpdateAlert("User", res.message);
+        },
+        error: function (error) {
+            unSuccessUpdateAlert("User", JSON.parse(error.responseText).message);
+        }
+    });
+});
+
 /*validations*/
 const regExFirstName = /^[A-z ]{3,20}$/;
 const regExLastName = /^[A-z ]{3,20}$/;
@@ -115,23 +138,14 @@ $("#password").on('keydown', function (event) {
     }
 });
 
-
-$("#btnSaveCustomer").click(function () {
-    let formDate=new FormData($("#customerForm")[0]);
-    $.ajax({
-        url: baseUrl+"reg_User",
-        method:"post",
-        data:formDate,
-        contentType:false,
-        processData:false,
-        success:function (res) {
-            alert(res.message);
-
-        },
-        error:function (error) {
-            alert(JSON.parse(error.responseText).message);
-
-        }
-
-    });
-});
+function setButtonState(value) {
+    if (value > 0) {
+        $("#btnSaveCustomer").attr('disabled', true);
+        $("#btnUpdateCustomer").attr('disabled', true);
+        $("#btnDeleteCustomer").attr('disabled', true);
+    } else {
+        $("#btnSaveCustomer").attr('disabled', false);
+        $("#btnUpdateCustomer").attr('disabled', false);
+        $("#btnDeleteCustomer").attr('disabled', false);
+    }
+}
