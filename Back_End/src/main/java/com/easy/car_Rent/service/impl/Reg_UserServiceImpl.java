@@ -4,6 +4,7 @@ import com.easy.car_Rent.dto.CustomDTO;
 import com.easy.car_Rent.dto.Reg_UserDTO;
 import com.easy.car_Rent.entity.Reg_User;
 import com.easy.car_Rent.entity.User;
+import com.easy.car_Rent.enums.RoleType;
 import com.easy.car_Rent.repo.Reg_UserRepo;
 import com.easy.car_Rent.service.Reg_UserService;
 import org.modelmapper.ModelMapper;
@@ -64,5 +65,44 @@ public class Reg_UserServiceImpl implements Reg_UserService {
     public ArrayList<Reg_UserDTO> getAllUser() {
         return mapper.map(repo.findAll(),new TypeToken<ArrayList<Reg_User>>(){
         }.getType());
+    }
+
+    @Override
+    public void updateUser(Reg_UserDTO dto) {
+        Reg_User regUser = new Reg_User(dto.getUser_Id(), dto.getName(), dto.getContact_No(), dto.getAddress(), dto.getEmail(), dto.getNic(), dto.getLicense_No(), "", "", new User(dto.getUser().getUser_Id(), dto.getUser().getRole_Type(), dto.getUser().getUser_Name(), dto.getUser().getPassword()));
+        if (!repo.existsById(dto.getUser_Id())) {
+            throw new RuntimeException("User Not Exist. Please enter Valid id..!");
+        }
+
+        try {
+
+            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            File uploadsDir = new File(projectPath + "/uploads");
+            System.out.println(projectPath);
+            uploadsDir.mkdir();
+
+            dto.getNic_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getNic_Img().getOriginalFilename()));
+            dto.getLicense_Img().transferTo(new File(uploadsDir.getAbsolutePath() + "/" + dto.getLicense_Img().getOriginalFilename()));
+
+            regUser.setNic_Img("uploads/" + dto.getNic_Img().getOriginalFilename());
+            regUser.setLicense_Img("uploads/" + dto.getLicense_Img().getOriginalFilename());
+
+
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
+        System.out.println(regUser);
+        regUser.getUser().setRole_Type(RoleType.REGISTERED_USER);
+        repo.save(regUser);
+    }
+
+    @Override
+    public void deleteUser(String reg_Id) {
+
+    }
+
+    @Override
+    public Reg_User searchUserId(String id) {
+        return null;
     }
 }
