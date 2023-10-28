@@ -1,5 +1,6 @@
 package com.easy.car_Rent.controller;
 
+import com.easy.car_Rent.dto.CustomDTO;
 import com.easy.car_Rent.dto.Reg_UserDTO;
 import com.easy.car_Rent.dto.UserDTO;
 import com.easy.car_Rent.embeded.Name;
@@ -25,4 +26,14 @@ public class Reg_UserController {
         regUserService.saveUser(reg_userDTO);
         return new ResponseUtil("OK", "Successfully Registered.!", null);
     }
+    @ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/reg_UserIdGenerate")
+    public @ResponseBody CustomDTO customerIdGenerate() {
+        return regUserService.userIdGenerate();
+    }
+@ResponseStatus(HttpStatus.CREATED)
+    @GetMapping(path = "/loadAllRegUser")
+    public ResponseUtil getAllUser(){
+        return new ResponseUtil("ok","Successfully loaded",regUserService.getAllUser());
+}
 }

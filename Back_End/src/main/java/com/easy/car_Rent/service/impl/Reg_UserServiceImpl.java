@@ -1,11 +1,13 @@
 package com.easy.car_Rent.service.impl;
 
+import com.easy.car_Rent.dto.CustomDTO;
 import com.easy.car_Rent.dto.Reg_UserDTO;
 import com.easy.car_Rent.entity.Reg_User;
 import com.easy.car_Rent.entity.User;
 import com.easy.car_Rent.repo.Reg_UserRepo;
 import com.easy.car_Rent.service.Reg_UserService;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +15,7 @@ import org.springframework.transaction.annotation.Transactional;
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 
 @Service
 @Transactional
@@ -50,5 +53,16 @@ public class Reg_UserServiceImpl implements Reg_UserService {
         }
         System.out.println(regUser);
         repo.save(regUser);
+    }
+
+    @Override
+    public CustomDTO userIdGenerate() {
+        return new CustomDTO(repo.getLastIndex());
+    }
+
+    @Override
+    public ArrayList<Reg_UserDTO> getAllUser() {
+        return mapper.map(repo.findAll(),new TypeToken<ArrayList<Reg_User>>(){
+        }.getType());
     }
 }
