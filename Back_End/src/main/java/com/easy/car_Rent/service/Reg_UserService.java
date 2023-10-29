@@ -14,7 +14,8 @@ public interface Reg_UserService {
     ArrayList<Reg_UserDTO> getAllUser();
     void updateUser(Reg_UserDTO dto);
     void deleteUser(String reg_Id);
-
+    CustomDTO getSumUser();
+    Reg_UserDTO availableUser(String userName);
     Reg_User searchUserId(String id);
 }
 

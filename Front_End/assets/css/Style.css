@@ -13,6 +13,11 @@ body{
 .logo img{
 width: 42px;
 }
+
+.control-error{
+    color:red;
+    font-size:15px;
+}
 .header{
     background: white;
 }
@@ -50,11 +55,11 @@ display: inline-block;
     width: 100%;
     color: #1d2951 !important;
 }
-#homeimg{
+/*#homeimg{
     background: url("/assets/img/web/Car Website – 1@2x.png");
     background-size: cover;
     background-position: right;
-}
+}*/
 #home {
     position: relative;
     width: 100vw;
@@ -62,7 +67,7 @@ display: inline-block;
     margin: 0px;
     z-index: 10;
     border-top: 1px solid black;
-    background: url("/assets/img/web/Car Website – 1@2x.png");
+    background: url("/Front_End/assets/img/web/Car Website – 1@2x.png");
     background-size: cover;
 
 }
