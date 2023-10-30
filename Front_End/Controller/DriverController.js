@@ -1,5 +1,5 @@
-let baseUrlDriver = "http://localhost:8081/Back_End_war/";
 
+let driverBaseUrl = "http://localhost:8080/Back_End_war/";
 loadAllDrivers();
 
 $("#btnSaveDriver").attr('disabled', true);
@@ -27,7 +27,6 @@ $("#btnSaveDriver").click(function () {
         }
     });
 });
-
 
 function generateDriverID() {
     $("#user_Id").val("DRI-001");
@@ -72,7 +71,6 @@ function setTextFieldValuesD(firstName, lastName, contact_No, address, email, ni
     checkValidity(driverValidations);
     $("#btnSaveDriver").attr('disabled', true);
 }
-
 
 
 function loadAllDrivers() {
@@ -185,7 +183,6 @@ function blindClickEventsD() {
     $("#btnSaveDriver").attr('disabled', true);
 }
 
-
 $("#btnUpdateDriver").click(function () {
     let formData = new FormData($("#driverForm")[0]);
     console.log(formData);
@@ -206,6 +203,10 @@ $("#btnUpdateDriver").click(function () {
     });
 });
 
+
+/**
+ * Delete Action
+ * */
 $("#btnDeleteDriver").click(function () {
     let id = $("#user_Id").val();
     $.ajax({
@@ -349,6 +350,4 @@ function setButtonState(value) {
         $("#btnUpdateDriver").attr('disabled', false);
         $("#btnDeleteDriver").attr('disabled', false);
     }
-
-
 }
