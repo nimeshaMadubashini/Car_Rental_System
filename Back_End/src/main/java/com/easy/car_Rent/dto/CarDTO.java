@@ -1,16 +1,25 @@
-package com.easy.car_Rent.dto;
+package com.easy.car_rental.dto;
 
-import com.easy.car_Rent.embeded.ImageDTO;
-import com.easy.car_Rent.embeded.Rate;
-import com.easy.car_Rent.enums.AvailabilityType;
-import com.easy.car_Rent.enums.CarType;
-import com.easy.car_Rent.enums.FuelType;
-import com.easy.car_Rent.enums.TransmissionType;
+import com.easy.car_rental.embeded.Image;
+import com.easy.car_rental.embeded.ImageDTO;
+import com.easy.car_rental.embeded.Rate;
+import com.easy.car_rental.enums.AvailabilityType;
+import com.easy.car_rental.enums.CarType;
+import com.easy.car_rental.enums.FuelType;
+import com.easy.car_rental.enums.TransmissionType;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
 
+import javax.persistence.Embedded;
+import javax.persistence.EnumType;
+import javax.persistence.Enumerated;
+
+/**
+ * @author : Nimesh Piyumantha
+ * @since : 0.1.0
+ **/
 @Data
 @NoArgsConstructor
 @AllArgsConstructor

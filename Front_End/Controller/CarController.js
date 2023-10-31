@@ -1,3 +1,8 @@
+/**
+ * @author : Nimesh Piyumantha
+ * @since : 0.1.0
+ **/
+
 let carBaseUrl = "http://localhost:8080/Back_End_war/";
 loadAllCars();
 
@@ -5,7 +10,9 @@ $("#btnSaveCar").attr('disabled', true);
 $("#btnUpdateCar").attr('disabled', true);
 $("#btnDeleteCar").attr('disabled', true);
 
-
+/**
+ * Car Save
+ * */
 $("#btnSaveCar").click(function () {
     let formData = new FormData($("#carForm")[0]);
     console.log(formData);
@@ -26,7 +33,9 @@ $("#btnSaveCar").click(function () {
     });
 });
 
-
+/**
+ * Car Id Generator
+ * */
 function generateCarID() {
     $("#car_Id").val("CAR-001");
     $.ajax({
@@ -52,7 +61,9 @@ function generateCarID() {
     });
 }
 
-
+/**
+ * clear input fields Values Method
+ * */
 function setTextFieldValuesC(name, brand, type, front_View, back_View, side_View, interior, number_Of_Passengers, transmission_Type, fuel_Type, daily_Rate, monthly_Rate, price_Extra_KM, registration_Number, free_Mileage, color, vehicleAvailabilityType) {
     $("#name").val(name);
     $("#brand").val(brand);
@@ -77,7 +88,9 @@ function setTextFieldValuesC(name, brand, type, front_View, back_View, side_View
     $("#btnSaveCar").attr('disabled', true);
 }
 
-
+/**
+ * load all customers Method
+ * */
 function loadAllCars() {
     $("#carTable").empty();
     $.ajax({
@@ -167,7 +180,9 @@ $("#search_Id").on("keypress", function (event) {
 });
 
 
-
+/**
+ * Table Listener Click and Load textFields
+ * */
 function blindClickEventsC() {
     $("#carTable>tr").on("click", function () {
         let car_Id = $(this).children().eq(0).text();
@@ -226,14 +241,13 @@ $("#btnUpdateCar").click(function () {
     });
 });
 
-
+/**
+ * Delete Action
+ * */
 $("#btnDeleteCar").click(function () {
     let id = $("#car_Id").val();
     $.ajax({
-        url: carBaseUrl + "car?id=" + id + "",
-        method: "delete",
-        dataType: "json",
-        success: function (resp) {
+        url: carBaseUrl + "car?id=" + id + "", method: "delete", dataType: "json", success: function (resp) {
             saveUpdateAlert("Car", resp.message);
             loadAllCars();
         }, error: function (error) {
