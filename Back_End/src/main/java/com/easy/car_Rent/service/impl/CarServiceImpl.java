@@ -60,7 +60,8 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-/*    public void updateCar(CarDTO dto) {
+
+    public void updateCar(CarDTO dto) {
         Car car = new Car(dto.getCar_Id(), dto.getName(), dto.getBrand(), dto.getType(), new Image(), dto.getNumber_Of_Passengers(), dto.getTransmission_Type(), dto.getFuel_Type(), dto.getRent_Duration_Price(), dto.getPrice_Extra_KM(), dto.getRegistration_Number(), dto.getFree_Mileage(), dto.getColor(), dto.getVehicleAvailabilityType());
         if (!repo.existsById(dto.getCar_Id())) {
             throw new RuntimeException("Car Not Exist. Please enter Valid id..!");
@@ -88,8 +89,9 @@ public class CarServiceImpl implements CarService {
 
         System.out.println(car);
         repo.save(car);
-    }*/
-    public void updateCar(CarDTO dto) {
+    }
+
+   /* public void updateCar(CarDTO dto) {
         if (!repo.existsById(dto.getCar_Id())) {
             throw new RuntimeException("Car Not Exist. Please enter a valid id..!");
         }
@@ -155,8 +157,7 @@ public class CarServiceImpl implements CarService {
             // If no new image provided, keep the existing path
             return existingImagePath;
         }
-    }
-
+    }*/
 
     @Override
     public void deleteCar(String car_Id) {

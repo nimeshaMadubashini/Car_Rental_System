@@ -1,3 +1,4 @@
+/*
 (function ($) {
     "use strict";
     
@@ -126,3 +127,4 @@
     
 })(jQuery);
 
+*/
