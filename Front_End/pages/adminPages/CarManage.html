@@ -16,12 +16,7 @@
 <!--purple-->
     <link rel="stylesheet" href="../../assets/vendor/mdi/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="../../assets/vendor/css/vendor.bundle.base.css">
-    <!-- endinject -->
-    <!-- Plugin css for this page -->
-    <!-- End plugin css for this page -->
-    <!-- inject:css -->
-    <!-- endinject -->
-    <!-- Layout styles -->
+
     <link rel="stylesheet" href="../../assets/vendor/style.css">
     <!-- Google Fonts -->
     <link href="https://fonts.gstatic.com" rel="preconnect">
@@ -36,6 +31,7 @@
 
     <!-- Template Dashboard CSS File -->
     <link href="../../assets/css/dashboardStyle.css" rel="stylesheet">
+
 
 </head>
 <body>
@@ -413,8 +409,7 @@
                                 </div>
 
                                 <div class="mt-4 mb-3 d-grid gap-2 d-sm-flex justify-content-md-center">
-                                    <button class="btn btn-success me-md-1" id="btnSaveCar" type="button"
-                                            formaction="driverForm" style="color: white">Save
+                                    <button class="btn btn-success me-md-1" id="btnSaveCar" type="button" formaction="carForm" style="color: white">Save
                                     </button>
                                     <button style="color: white" type="button" class="btn btn-warning me-md-1" id="btnUpdateCar">Update
                                     </button>
@@ -485,6 +480,10 @@
 
 <!-- Template Dashboard Main JS File -->
 <script src="../../assets/js/dashboardMain.js"></script>
+<script src="../../Controller/CarController.js"></script>
+<script src="../../util/alert.js"></script>
+<script src="../../util/validation.js"></script>
+
 </body>
 
 </html>

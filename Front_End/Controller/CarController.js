@@ -1,11 +1,7 @@
-/**
- * @author : Nimesh Piyumantha
- * @since : 0.1.0
- **/
+
 
 let carBaseUrl = "http://localhost:8080/Back_End_war/";
 loadAllCars();
-
 $("#btnSaveCar").attr('disabled', true);
 $("#btnUpdateCar").attr('disabled', true);
 $("#btnDeleteCar").attr('disabled', true);

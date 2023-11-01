@@ -1,27 +1,23 @@
-package com.easy.car_rental.controller;
+package com.easy.car_Rent.controller;
 
-import com.easy.car_rental.dto.CarDTO;
-import com.easy.car_rental.dto.CustomDTO;
-import com.easy.car_rental.embeded.ImageDTO;
-import com.easy.car_rental.embeded.Rate;
-import com.easy.car_rental.entity.Car;
-import com.easy.car_rental.service.CarService;
-import com.easy.car_rental.util.ResponseUtil;
+import com.easy.car_Rent.dto.CarDTO;
+import com.easy.car_Rent.dto.CustomDTO;
+import com.easy.car_Rent.embeded.ImageDTO;
+import com.easy.car_Rent.embeded.Rate;
+import com.easy.car_Rent.entity.Car;
+import com.easy.car_Rent.service.CarService;
+import com.easy.car_Rent.util.ResponseUtil;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.ArrayList;
 
-/**
- * @author : Nimesh Piyumantha
- * @since : 0.1.0
- **/
+
 @RestController
 @CrossOrigin
 @RequestMapping("/car")
 public class CarController {
-
     @Autowired
     private CarService service;
 

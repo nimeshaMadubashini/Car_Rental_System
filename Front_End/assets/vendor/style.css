@@ -14103,8 +14103,9 @@ dl {
     color: #ffffff; }
   .navbar.navbar-dark .navbar-menu-wrapper .search-field .input-group i {
     color: #ffffff; }
+/*
 
-/* Sidebar */
+!* Sidebar *!
 .sidebar {
   min-height: calc(100vh - 70px);
   background: #ffffff;
@@ -14267,6 +14268,7 @@ dl {
             color: #555555; }
         .sidebar .nav.sub-menu .nav-item:hover {
           background:#003366 ; }
+*/
 
 /* style for off-canvas menu*/
 @media screen and (max-width: 991px) {
@@ -14407,6 +14409,7 @@ dl {
     background-color: darkgrey;
     outline: 1px solid slategrey; }
 
+/*
 .page-body-wrapper {
   min-height: calc(100vh - 70px);
   display: -webkit-box;
@@ -14447,4 +14450,5 @@ dl {
   -ms-flex-positive: 1;
   flex-grow: 1; }
 
-/*# sourceMappingURL=style.css.map */
+!*# sourceMappingURL=style.css.map *!
+*/

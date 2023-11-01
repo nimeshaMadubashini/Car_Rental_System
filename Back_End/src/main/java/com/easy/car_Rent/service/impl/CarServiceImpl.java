@@ -1,33 +1,24 @@
-package com.easy.car_rental.service.impl;
+package com.easy.car_Rent.service.impl;
 
-import com.easy.car_rental.dto.CarDTO;
-import com.easy.car_rental.dto.CustomDTO;
-import com.easy.car_rental.embeded.Image;
-import com.easy.car_rental.embeded.ImageDTO;
-import com.easy.car_rental.entity.Car;
-import com.easy.car_rental.enums.CarType;
-import com.easy.car_rental.enums.FuelType;
-import com.easy.car_rental.enums.TransmissionType;
-import com.easy.car_rental.repo.CarRepo;
-import com.easy.car_rental.service.CarService;
+import com.easy.car_Rent.dto.CarDTO;
+import com.easy.car_Rent.dto.CustomDTO;
+import com.easy.car_Rent.embeded.Image;
+import com.easy.car_Rent.entity.Car;
+import com.easy.car_Rent.repo.CarRepo;
+import com.easy.car_Rent.service.CarService;
 import org.modelmapper.ModelMapper;
 import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.multipart.MultipartFile;
 
 import java.io.File;
 import java.io.IOException;
 import java.net.URISyntaxException;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
 import java.util.ArrayList;
 
-/**
- * @author : Nimesh Piyumantha
- * @since : 0.1.0
- **/
+
 @Service
 @Transactional
 public class CarServiceImpl implements CarService {
@@ -69,7 +60,7 @@ public class CarServiceImpl implements CarService {
     }
 
     @Override
-    public void updateCar(CarDTO dto) {
+/*    public void updateCar(CarDTO dto) {
         Car car = new Car(dto.getCar_Id(), dto.getName(), dto.getBrand(), dto.getType(), new Image(), dto.getNumber_Of_Passengers(), dto.getTransmission_Type(), dto.getFuel_Type(), dto.getRent_Duration_Price(), dto.getPrice_Extra_KM(), dto.getRegistration_Number(), dto.getFree_Mileage(), dto.getColor(), dto.getVehicleAvailabilityType());
         if (!repo.existsById(dto.getCar_Id())) {
             throw new RuntimeException("Car Not Exist. Please enter Valid id..!");
@@ -97,7 +88,75 @@ public class CarServiceImpl implements CarService {
 
         System.out.println(car);
         repo.save(car);
+    }*/
+    public void updateCar(CarDTO dto) {
+        if (!repo.existsById(dto.getCar_Id())) {
+            throw new RuntimeException("Car Not Exist. Please enter a valid id..!");
+        }
+
+        try {
+            String projectPath = new File(this.getClass().getProtectionDomain().getCodeSource().getLocation().toURI()).getParentFile().getParentFile().getAbsolutePath();
+            File uploadsDir = new File(projectPath + "/uploads");
+            uploadsDir.mkdirs(); // Create the directory if it doesn't exist (use mkdirs, not mkdir)
+
+            Car existingCar = repo.findById(dto.getCar_Id()).orElseThrow(() -> new RuntimeException("Car with ID " + dto.getCar_Id() + " not found."));
+
+            // Update the car properties
+            existingCar.setName(dto.getName());
+            existingCar.setBrand(dto.getBrand());
+            existingCar.setType(dto.getType());
+            existingCar.setNumber_Of_Passengers(dto.getNumber_Of_Passengers());
+            existingCar.setTransmission_Type(dto.getTransmission_Type());
+            existingCar.setFuel_Type(dto.getFuel_Type());
+            existingCar.setRent_Duration_Price(dto.getRent_Duration_Price());
+            existingCar.setPrice_Extra_KM(dto.getPrice_Extra_KM());
+            existingCar.setRegistration_Number(dto.getRegistration_Number());
+            existingCar.setFree_Mileage(dto.getFree_Mileage());
+            existingCar.setColor(dto.getColor());
+            existingCar.setVehicleAvailabilityType(dto.getVehicleAvailabilityType());
+
+            // Update the image files
+            String frontViewFileName = updateImage(dto.getImage().getFront_View(), uploadsDir, existingCar.getImage().getFront_View());
+            String backViewFileName = updateImage(dto.getImage().getBack_View(), uploadsDir, existingCar.getImage().getBack_View());
+            String sideViewFileName = updateImage(dto.getImage().getSide_View(), uploadsDir, existingCar.getImage().getSide_View());
+            String interiorFileName = updateImage(dto.getImage().getInterior(), uploadsDir, existingCar.getImage().getInterior());
+
+            existingCar.getImage().setFront_View(frontViewFileName);
+            existingCar.getImage().setBack_View(backViewFileName);
+            existingCar.getImage().setSide_View(sideViewFileName);
+            existingCar.getImage().setInterior(interiorFileName);
+
+            repo.save(existingCar);
+        } catch (IOException | URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
+
+    private String updateImage(MultipartFile newImage, File uploadsDir, String existingImagePath) throws IOException {
+        if (newImage != null && !newImage.isEmpty()) {
+            // Generate a unique filename based on the original filename
+            String originalFilename = newImage.getOriginalFilename();
+            String newFileName = System.currentTimeMillis() + "_" + originalFilename;
+            File newImageFile = new File(uploadsDir, newFileName);
+
+            // Transfer the new image to the updated location
+            newImage.transferTo(newImageFile);
+
+            // Check if the existing image exists and delete it if necessary
+            File existingImageFile = new File(uploadsDir, existingImagePath);
+            if (existingImageFile.exists() && !existingImageFile.isDirectory()) {
+                if (!existingImageFile.delete()) {
+                    throw new RuntimeException("Unable to delete the existing file: " + existingImagePath);
+                }
+            }
+
+            return newFileName;
+        } else {
+            // If no new image provided, keep the existing path
+            return existingImagePath;
+        }
+    }
+
 
     @Override
     public void deleteCar(String car_Id) {

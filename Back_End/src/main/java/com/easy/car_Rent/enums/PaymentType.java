@@ -1,9 +1,6 @@
-package com.easy.car_rental.enums;
+package com.easy.car_Rent.enums;
 
-/**
- * @author : Nimesh Piyumantha
- * @since : 0.1.0
- **/
+
 public enum PaymentType {
     NOMARL,LOST_DAMAGE
 }

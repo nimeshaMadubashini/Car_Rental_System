@@ -13,7 +13,6 @@
   <meta content="width=device-width initial-scale=1 maximum-scale=1 minimum-scale=1 user-scalable=no" name="viewport">
   <meta content="yellow" name="theme-color">
   <link rel="stylesheet" href="../assets/frontAwsome/fontawesome-free-6.4.0-web/css/all.css">
-  <!--purple-->
   <link rel="stylesheet" href="../assets/vendor/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="../assets/vendor/css/vendor.bundle.base.css">
   <!-- endinject -->
@@ -36,8 +35,11 @@
 
   <!-- Template Dashboard CSS File -->
   <link href="../assets/css/dashboardStyle.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+
 
 </head>
+
 <body>
 <!-- ======= Header ======= -->
 <header id="header" class="header fixed-top d-flex align-items-center bg-light">
@@ -95,6 +97,7 @@
   </nav>
 
 </header>
+
 <!-- End Header -->
 
 <!-- ======= Sidebar ======= -->
@@ -253,7 +256,7 @@
           </div>
         </div>
 
-        <div class="card info-card"  style="margin-top: 42px;     box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
+        <div class="card info-card"  style="box-shadow: 13px 13px 20px #cbced1, -13px -13px 20px #fff;
 ;background-color: #F5F5E6">
           <div class="row">
             <div class="col-lg-12">
@@ -347,6 +350,7 @@
             </div>
           </div>
         </div>
+
       </div>
       <div class="card info-card" id="card3" style="
     height: 351px;
@@ -544,8 +548,9 @@
 
 <!-- Template Dashboard Main JS File -->
 <script src="../assets/js/dashboardMain.js"></script>
-
-
+<script src="../Controller/reg_UserDashBoardController.js"></script>
+<script src="../util/alert.js"></script>
+<script src="../util/validation.js"></script>
 <script>
   $(document).ready(function () {
     $("#bookingResponse").css('display', 'block');

@@ -1,7 +1,4 @@
-/**
- * @author : Nimesh Piyumantha
- * @since : 0.1.0
- **/
+
 let RentAllManageBaseUrl = "http://localhost:8080/Back_End_war/";
 loadAllRentDetails();
 
@@ -243,10 +240,7 @@ function loadAllCars() {
 }
 
 $("#btnPay").on("click", function () {
-    /*let rentID = $("#rentID").val();
-    // let formData = new FormData($("#PayementToRent")[0]);
-    let formData = $("#PayementToRent").serialize();
-    console.log(formData);*/
+
 
     let paymentId = $("#paymentID").val();
     let rentID = $("#rentID").val();
