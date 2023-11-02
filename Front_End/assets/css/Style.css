@@ -167,3 +167,16 @@ right: 20px;
     font-size: 15px;
     font-weight: bold;
 }
+.card-list {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.card-list-item {
+    flex: 1;
+    text-align: left;
+    list-style: none;
+    color: white;
+    font-size: 16px;
+}
